@@ -1,0 +1,6 @@
+# Bundle patch for the @scandicboy/dsh-locale-ru Russian language pack.
+# Applied when this package is selected as a profile bundle: it inserts the
+# locale-ru plugin entry into the Loader tree.
+- insert:
+    - id: locale-ru
+      name: "@scandicboy/dsh-locale-ru"

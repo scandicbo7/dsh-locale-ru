@@ -1,0 +1,56 @@
+{
+  "name": "@scandicboy/dsh-locale-ru",
+  "description": "Русская локализация интерфейса DeepSeek Harness (Russian language pack for the DeepSeek Harness web GUI). Сгенерировано с помощью ИИ.",
+  "version": "1.0.0",
+  "author": "scandicboy",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": "0.2.0-rc.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh": "0.2.0-rc.2"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "locale",
+    "language-pack",
+    "russian",
+    "русский",
+    "перевод",
+    "локализация",
+    "ai-generated"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
